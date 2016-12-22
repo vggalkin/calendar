@@ -1,0 +1,31 @@
+{
+    "name": "borysenko/calendar",
+    "description": "Calendar of events Расширение для Yii 2",
+    "keywords": [
+        "calendar", "Yii2 calendar of events", "yii calendar of events", "calendar of events yii", "calendar of events"
+    ],
+    "homepage": "https://github.com/borysenko/calendar",
+    "type": "yii2-extension",
+    "minimum-stability":"stable",
+    "authors": [
+        {
+            "name": "Pavel Borysenko",
+            "email": "pavel.borysenko@gmail.com",
+            "homepage": "http://webplus.com.ua/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "borysenko\\calendar\\": ""
+        }
+    },
+    "require": {
+        "borysenko/calendar": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/borysenko/calendar.git"
+        }
+    ]
+}
