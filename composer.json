@@ -20,7 +20,7 @@
         }
     },
     "require": {
-        "borysenko/calendar": "master"
+        "borysenko/calendar": "dev-master"
     },
     "repositories": [
         {
