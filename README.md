@@ -21,7 +21,8 @@ php -d "disable_functions=" composer.phar require  borysenko/calendar "dev-maste
 <code>
 \Yii::$container->set('borysenko\calendar\Calendar', [
     'model'=>'frontend\models\News',
-    'field_table' => 'date'
+    'field_table' => 'date',
+    'link' => '/news/index'
 ]);
 </code>
 </pre>
