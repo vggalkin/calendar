@@ -33,14 +33,14 @@ class Calendar extends Widget
 
 
         if(!Yii::$app->request->isAjax)
-            echo "<div id=\"calendar_borysenko\">" . $this->my_calendar([date("Y-m-d"),"2016-12-24"]) . "</div>";
+            echo "<div id=\"calendar_borysenko\">" . $this->my_calendar() . "</div>";
         else
-            echo $this->my_calendar([date("Y-m-d"),"2016-12-24"]);
+            echo $this->my_calendar();
 
     }
 
 
-    private function my_calendar($fill=array())
+    private function my_calendar()
     {
         $calendar_view = '';
 
