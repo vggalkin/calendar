@@ -12,6 +12,7 @@ class Calendar extends Widget
 {
     public $model;
     public $field_table;
+    public $link;
 
     public function init()
     {
@@ -93,7 +94,7 @@ class Calendar extends Widget
             } else {
                 $now="$y-$m-".sprintf("%02d",$d);
                 if (is_array($fill) AND in_array($now,$fill)) {
-                    $calendar_view .= '<div class="todate"><a href="'.Url::to(['/news/index','date'=>$now]).'">'.$d.'</a></div>';
+                    $calendar_view .= '<div class="todate"><a href="'.Url::to([$this->link,'date'=>$now]).'">'.$d.'</a></div>';
                 } else {
                     $calendar_view .= $d;
                 }
