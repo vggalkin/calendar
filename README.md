@@ -5,13 +5,13 @@
 
 <pre>
 <code>
-php composer.phar require  borysenko/calendar "dev-master"
+php composer.phar require  vggalkin/calendar "dev-master"
 </code>
 </pre>
 или
 <pre>
 <code>
-php -d "disable_functions=" composer.phar require  borysenko/calendar "dev-master"
+php -d "disable_functions=" composer.phar require  vggalkin/calendar "dev-master"
 </code>
 </pre>
 
@@ -19,7 +19,7 @@ php -d "disable_functions=" composer.phar require  borysenko/calendar "dev-maste
 в \frontend\config\main.php добавляем в самом вверху
 <pre>
 <code>
-\Yii::$container->set('borysenko\calendar\Calendar', [
+\Yii::$container->set('vggalkin\calendar\Calendar', [
     'model'=>'frontend\models\News',
     'field_table' => 'date',
     'link' => '/news/index'
@@ -34,7 +34,7 @@ field_table - это поле в таблицы событий, по нему д
 <code>
     'controllerMap' => [
         'calendar' => [
-            'class' => 'borysenko\calendar\BaseController',
+            'class' => 'vggalkin\calendar\BaseController',
             ]
      ],
 </code>
@@ -45,6 +45,6 @@ field_table - это поле в таблицы событий, по нему д
 В шаблоне:
 <pre>
 <code>
-    echo borysenko\calendar\Calendar::widget([]);
+    echo vggalkin\calendar\Calendar::widget([]);
 </code>
 </pre>
