@@ -16,11 +16,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "borysenko\\calendar\\": ""
+            "vggalkin\\calendar\\": ""
         }
     },
     "require": {
-        "borysenko/calendar": "dev-master"
+        "vggalkin/calendar": "dev-master"
     },
     "repositories": [
         {
