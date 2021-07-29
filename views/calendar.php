@@ -1,2 +1,2 @@
 <?php
-echo borysenko\calendar\Calendar::widget([]);
+echo vggalkin\calendar\Calendar::widget([]);

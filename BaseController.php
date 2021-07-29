@@ -1,5 +1,5 @@
 <?php
-namespace borysenko\calendar;
+namespace vggalkin\calendar;
 
 use Yii;
 use yii\filters\AccessControl;
