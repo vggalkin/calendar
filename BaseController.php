@@ -14,7 +14,7 @@ class BaseController extends Controller{
     public function actionIndex()
     {
 
-        return $this->renderAjax("@vendor/borysenko/calendar/views/calendar.php", []);
+        return $this->renderAjax("@vendor/vggalkin/calendar/views/calendar.php", []);
     }
 
 
