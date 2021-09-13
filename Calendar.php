@@ -130,11 +130,11 @@ class Calendar extends Widget
             } else {
                 $now = "$y-$m-" . sprintf("%02d", $d);
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
-                    $calendar_view .= '<div class="todate" style="background-color: red; color: darkgreen;"><b>' . $d . '</b></div>';
+                    $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #060064;"><b>' . $d . '</b></div>';
                 } else if (is_array($holidays) and in_array($now, $holidays)) {
-                    $calendar_view .= '<div class="todate" style="background-color: red; color: white;">' . $d . '</div>';
+                    $calendar_view .= '<div class="todate" style="background-color: #f18d8d;">' . $d . '</div>';
                 } else if ($today == $now) {
-                    $calendar_view .= '<div class="todate" style="background-color: green; color: white;">' . $d . '</div>';
+                    $calendar_view .= '<div class="todate" style="background-color: #7bea7b;">' . $d . '</div>';
                 } else {
                     $calendar_view .= $d;
                 }
