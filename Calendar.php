@@ -127,7 +127,7 @@ class Calendar extends Widget
  <tr height="30" class="week"><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td style="color: red">Сб</td><td style="color: red">Вс</td></tr>';
         }
         //$birth_date_exp = explode('-', $this->birth_date);
-        var_dump($today, $birth);
+
         for ($d = $start; $d <= $end; $d++) {
             if (!($i++ % 7)) $calendar_view .= " <tr>\n";
             $calendar_view .= '  <td align="center">';
@@ -135,6 +135,7 @@ class Calendar extends Widget
                 $calendar_view .= "&nbsp";
             } else {
                 $now = "$y-$m-" . sprintf("%02d", $d);
+                var_dump($now, $birth);
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #060064;"><b>' . $d . '</b></div>';
                 } else if (is_array($holidays) and in_array($now, $holidays)) {
