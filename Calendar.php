@@ -97,7 +97,28 @@ class Calendar extends Widget
         $i = 0;
 
         if (isset($Id)) {
-
+            $calendar_view .= '<style>
+   [data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 300px; /* Ширина подсказки */
+    left: 0; top: 0; /* Положение подсказки */
+    background: #3989c9; /* Синий цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 0.5em; /* Поля вокруг текста */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+   } 
+   [data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    top: 2em; /* Положение подсказки */
+   }
+  </style>';
             $calendar_view .= '<h3 style="text-align: center;">Отпуска</h3><table width="100%" height="400" border=1 class="calendar table-bordered" cellspacing=1 cellpadding=2>
  <tr>
   <td height="60" class="title" colspan=7>
@@ -137,7 +158,6 @@ class Calendar extends Widget
                 $now = "$y-$m-" . sprintf("%02d", $d);
                 $now_2 = explode('-', $now)[1] . explode('-', $now)[2] ;
                 $birth_2 = explode('-',$birth)[1] . explode('-', $birth)[2];
-                var_dump($now_2, $birth_2);
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #060064;"><b>' . $d . '</b></div>';
                 } else if (is_array($holidays) and in_array($now, $holidays)) {
@@ -145,7 +165,7 @@ class Calendar extends Widget
                 } else if ($today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #7bea7b;">' . $d . '</div>';
                 } else if ($now_2 == $birth_2) {
-                    $calendar_view .= '<div class="todate" style="background-color: #ee5e13;">' . $d . '</div>';
+                    $calendar_view .= '<div class="todate" style="background-color: #ee5e13;" data-tooltip="День рождения">' . $d . '</div>';
                 } else {
                     $calendar_view .= $d;
                 }
