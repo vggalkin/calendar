@@ -161,11 +161,11 @@ class Calendar extends Widget
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now and $now_2 == $birth_2) {
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #9b3200;" data-tooltip="День рождения"><b>' . $d . '</b></div>';
                 } else if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
-                    $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #060064;"><b>' . $d . '</b></div>';
+                    $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #060064;" data-tooltip="Отпуск"><b>' . $d . '</b></div>';
                 } else if (is_array($holidays) and in_array($now, $holidays)) {
-                    $calendar_view .= '<div class="todate" style="background-color: #f18d8d;">' . $d . '</div>';
+                    $calendar_view .= '<div class="todate" style="background-color: #f18d8d;" data-tooltip="Отпуск">' . $d . '</div>';
                 } else if ($today == $now) {
-                    $calendar_view .= '<div class="todate" style="background-color: #7bea7b;">' . $d . '</div>';
+                    $calendar_view .= '<div class="todate" style="background-color: #7bea7b;" data-tooltip="Сегодня">' . $d . '</div>';
                 } else if ($now_2 == $birth_2) {
                     $calendar_view .= '<div class="todate" style="background-color: #ee5e13;" data-tooltip="День рождения">' . $d . '</div>';
                 } else {
