@@ -14,6 +14,7 @@ class Calendar extends Widget
     public $model;
     public $field_table;
     public $link;
+    public $birth_date;
 
 
     public function init()
