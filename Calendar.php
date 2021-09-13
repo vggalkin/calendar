@@ -137,7 +137,7 @@ class Calendar extends Widget
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d;">' . $d . '</div>';
                 } else if ($today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #7bea7b;">' . $d . '</div>';
-                } else if (strftime('%m',$today) == $birth_date_exp[1] and strftime('%d',$today) == $birth_date_exp[2]) {
+                } else if (explode('-', $today)[1] == $birth_date_exp[1] and explode('-', $today)[2] == $birth_date_exp[2]) {
                     $calendar_view .= '<div class="todate" style="background-color: #ee5e13;">' . $d . '</div>';
                 } else {
                     $calendar_view .= $d;
