@@ -104,8 +104,8 @@ class Calendar extends Widget
    [data-tooltip]::after {
     content: attr(data-tooltip); /* Выводим текст */
     position: absolute; /* Абсолютное позиционирование */
-    width: 300px; /* Ширина подсказки */
-    left: 0; top: 0; /* Положение подсказки */
+    width: 100px; /* Ширина подсказки */
+    left: 0; top: 0; right: 150px /* Положение подсказки */
     background: #3989c9; /* Синий цвет фона */
     color: #fff; /* Цвет текста */
     padding: 0.5em; /* Поля вокруг текста */
