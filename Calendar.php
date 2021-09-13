@@ -135,6 +135,8 @@ class Calendar extends Widget
                 $calendar_view .= "&nbsp";
             } else {
                 $now = "$y-$m-" . sprintf("%02d", $d);
+                $now_2 = explode('-', $now)[1.];
+                $birth_2 = explode('-',$birth)[1.];
                 //var_dump($now, $birth);
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #060064;"><b>' . $d . '</b></div>';
@@ -142,7 +144,7 @@ class Calendar extends Widget
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d;">' . $d . '</div>';
                 } else if ($today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #7bea7b;">' . $d . '</div>';
-                } else if (explode('-',$now)[1.] == explode('-',$birth)[1.]) {
+                } else if ($now_2 == $birth_2) {
                     $calendar_view .= '<div class="todate" style="background-color: #ee5e13;">' . $d . '</div>';
                 } else {
                     $calendar_view .= $d;
