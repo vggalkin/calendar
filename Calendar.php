@@ -159,7 +159,7 @@ class Calendar extends Widget
                 $now_2 = explode('-', $now)[1] . explode('-', $now)[2] ;
                 $birth_2 = explode('-',$birth)[1] . explode('-', $birth)[2];
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now and $now_2 == $birth_2) {
-                    $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #9b3200;"><b>' . $d . '</b></div>';
+                    $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #9b3200;" data-tooltip="День рождения"><b>' . $d . '</b></div>';
                 } else if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #060064;"><b>' . $d . '</b></div>';
                 } else if (is_array($holidays) and in_array($now, $holidays)) {
