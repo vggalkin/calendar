@@ -138,7 +138,7 @@ class Calendar extends Widget
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d;">' . $d . '</div>';
                 } else if ($today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #7bea7b;">' . $d . '</div>';
-                } else if ($today == $birth_date) {
+                } else if ($today == date('Y-m-d', $birth_date)) {
                     $calendar_view .= '<div class="todate" style="background-color: #ee5e13;">' . $d . '</div>';
                 } else {
                     $calendar_view .= $d;
