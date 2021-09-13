@@ -106,7 +106,7 @@ class Calendar extends Widget
    </table>
   </td>
  </tr>
- <tr height="30" class="week"><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td>Сб</td><td>Вс</td></tr>';
+ <tr height="30" class="week"><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td style="color: red">Сб</td><td style="color: red">Вс</td></tr>';
         } else {
             $calendar_view .= '<h3 style="text-align: center;">Отпуска</h3><table width="100%" height="400" border=1 class="calendar table-bordered" cellspacing=1 cellpadding=2>
  <tr>
@@ -120,7 +120,7 @@ class Calendar extends Widget
    </table>
   </td>
  </tr>
- <tr height="30" class="week"><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td>Сб</td><td>Вс</td></tr>';
+ <tr height="30" class="week"><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td style="color: red">Сб</td><td style="color: red">Вс</td></tr>';
         }
         for ($d = $start; $d <= $end; $d++) {
             if (!($i++ % 7)) $calendar_view .= " <tr>\n";
