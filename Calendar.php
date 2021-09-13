@@ -66,7 +66,7 @@ class Calendar extends Widget
         if (isset($_GET['id'])) {
             $Id = $_GET['id'];
             $fills = ArrayHelper::getColumn($model::find()->asArray()->where(['Id' => $Id])->all(), $field_date);
-            $birth = ArrayHelper::getColumn($model::find()->asArray()->where(['Id' => $Id])->all(), $birth_date);
+            $birth = ArrayHelper::getColumn($model::find()->asArray()->where(['Id' => $Id])->all(), $birth_date)[0];
             if (!$fills[0] == Null) {
                 foreach (explode(',', $fills[0]) as $fill) {
                     array_push($fill_array, $fill);
@@ -141,7 +141,7 @@ class Calendar extends Widget
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d;">' . $d . '</div>';
                 } else if ($today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #7bea7b;">' . $d . '</div>';
-                } else if ($today == $birth_date) {
+                } else if ($today == $birth) {
                     $calendar_view .= '<div class="todate" style="background-color: #ee5e13;">' . $d . '</div>';
                 } else {
                     $calendar_view .= $d;
