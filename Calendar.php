@@ -129,7 +129,9 @@ class Calendar extends Widget
                 $calendar_view .= "&nbsp";
             } else {
                 $now = "$y-$m-" . sprintf("%02d", $d);
-                if (is_array($holidays) and in_array($now, $holidays)) {
+                if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
+                    $calendar_view .= '<div class="todate" style="background-color: red; color: darkgreen;">' . $d . '</div>';
+                } else if (is_array($holidays) and in_array($now, $holidays)) {
                     $calendar_view .= '<div class="todate" style="background-color: red; color: white;">' . $d . '</div>';
                 } else if ($today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: green; color: white;">' . $d . '</div>';
