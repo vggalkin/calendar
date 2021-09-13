@@ -135,8 +135,8 @@ class Calendar extends Widget
                 $calendar_view .= "&nbsp";
             } else {
                 $now = "$y-$m-" . sprintf("%02d", $d);
-                $now_2 = explode('-', $now)[1.2];
-                $birth_2 = explode('-',$birth)[1.2];
+                $now_2 = explode('-', $now)[1] . explode('-', $now)[2] ;
+                $birth_2 = explode('-',$birth)[1] . explode('-', $birth)[2];
                 var_dump($now_2, $birth_2);
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d; color: #060064;"><b>' . $d . '</b></div>';
