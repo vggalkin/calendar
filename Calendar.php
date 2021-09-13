@@ -125,6 +125,7 @@ class Calendar extends Widget
         }
         //$birth_date_exp = explode('-', $this->birth_date);
         $birth_date = $this->birth_date;
+        var_dump($today, $birth_date);
         for ($d = $start; $d <= $end; $d++) {
             if (!($i++ % 7)) $calendar_view .= " <tr>\n";
             $calendar_view .= '  <td align="center">';
@@ -138,7 +139,7 @@ class Calendar extends Widget
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d;">' . $d . '</div>';
                 } else if ($today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #7bea7b;">' . $d . '</div>';
-                } else if ($today == date('Y-m-d', $birth_date)) {
+                } else if ($today == $birth_date) {
                     $calendar_view .= '<div class="todate" style="background-color: #ee5e13;">' . $d . '</div>';
                 } else {
                     $calendar_view .= $d;
