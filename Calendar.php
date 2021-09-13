@@ -57,13 +57,16 @@ class Calendar extends Widget
 
         $className = $this->model;
         $field_date = $this->field_table;
+        $birth_date = $this->birth_date;
         $model = \Yii::createObject($className);
         //$fill = ArrayHelper::getColumn($model::find()->asArray()->where($field_date . '>="'.date('Y-m-d',mktime(0,0,0,$m,1,$y)).'" AND '. $field_date . '<"'.date('Y-m-d',mktime(0,0,0,$m+1,1,$y)).'"')->groupBy($field_date)->all(), $field_date);
         $fill_array = array();
         $holidays = array();
+        $birth = '';
         if (isset($_GET['id'])) {
             $Id = $_GET['id'];
             $fills = ArrayHelper::getColumn($model::find()->asArray()->where(['Id' => $Id])->all(), $field_date);
+            $birth = ArrayHelper::getColumn($model::find()->asArray()->where(['Id' => $Id])->all(), $birth_date);
             if (!$fills[0] == Null) {
                 foreach (explode(',', $fills[0]) as $fill) {
                     array_push($fill_array, $fill);
@@ -124,8 +127,7 @@ class Calendar extends Widget
  <tr height="30" class="week"><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td style="color: red">Сб</td><td style="color: red">Вс</td></tr>';
         }
         //$birth_date_exp = explode('-', $this->birth_date);
-        $birth_date = $this->birth_date;
-        var_dump($today, $birth_date);
+        var_dump($today, $birth);
         for ($d = $start; $d <= $end; $d++) {
             if (!($i++ % 7)) $calendar_view .= " <tr>\n";
             $calendar_view .= '  <td align="center">';
