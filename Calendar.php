@@ -119,6 +119,11 @@ class Calendar extends Widget
     opacity: 1; /* Показываем подсказку */
     top: 2em; /* Положение подсказки */
    }
+   [calendar] {
+   background-color: #d9edf7;
+   padding: 10px;
+   border-radius: 10px;
+   }
   </style>';
             $calendar_view .= '<h3 style="text-align: center;"></h3><table width="100%" height="400" border=1 class="calendar table-bordered" cellspacing=1 cellpadding=2>
  <tr>
