@@ -130,9 +130,9 @@ class Calendar extends Widget
   <td height="60" class="title" colspan=7>
    <table width="100%" border=0 cellspacing=0 cellpadding=0>
     <tr>
-     <td align="left" style="margin-left: 10px;"><a class="c_ajax btn btn-primary" href="' . Url::to('/backend/web/calendar/index' . $prev . '&id=' . $Id) . '">&lt;&lt;&lt;</a></td>
+     <td align="left"><a class="c_ajax btn btn-primary" style="margin-left: 10px;" href="' . Url::to('/backend/web/calendar/index' . $prev . '&id=' . $Id) . '">&lt;&lt;&lt;</a></td>
      <td align="center">' . $month_names[$m - 1] . " " . $y . '</td>
-     <td align="right" style="right: 10px;"><a class="c_ajax btn btn-primary" href="' . Url::to('/backend/web/calendar/index' . $next . '&id=' . $Id) . '">&gt;&gt;&gt;</a></td>
+     <td align="right"><a class="c_ajax btn btn-primary" style="right: 10px;" href="' . Url::to('/backend/web/calendar/index' . $next . '&id=' . $Id) . '">&gt;&gt;&gt;</a></td>
     </tr>
    </table>
   </td>
@@ -144,9 +144,9 @@ class Calendar extends Widget
   <td height="60" class="title" colspan=7>
    <table width="100%" border=0 cellspacing=0 cellpadding=0>
     <tr>
-     <td align="left" style="margin-left: 10px;"><a class="c_ajax btn btn-primary" href="' . Url::to('/backend/web/calendar/index' . $prev) . '">&lt;&lt;&lt;</a></td>
+     <td align="left"><a class="c_ajax btn btn-primary" style="margin-left: 10px;" href="' . Url::to('/backend/web/calendar/index' . $prev) . '">&lt;&lt;&lt;</a></td>
      <td align="center">' . $month_names[$m - 1] . " " . $y . '</td>
-     <td align="right" style="right: 10px;"><a class="c_ajax btn btn-primary" href="' . Url::to('/backend/web/calendar/index' . $next) . '">&gt;&gt;&gt;</a></td>
+     <td align="right"><a class="c_ajax btn btn-primary" style="right: 10px;" href="' . Url::to('/backend/web/calendar/index' . $next) . '">&gt;&gt;&gt;</a></td>
     </tr>
    </table>
   </td>
