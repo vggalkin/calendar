@@ -112,6 +112,7 @@ class Calendar extends Widget
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
     pointer-events: none; /* Подсказка */
     opacity: 0; /* Подсказка невидима */
+    z-index: 100; /* Поверх всего
     transition: 1s; /* Время появления подсказки */
    } 
    [data-tooltip]:hover::after {
