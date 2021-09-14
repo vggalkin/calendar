@@ -119,7 +119,7 @@ class Calendar extends Widget
     top: 2em; /* Положение подсказки */
    }
   </style>';
-            $calendar_view .= '<h3 style="text-align: center;">Отпуска</h3><table width="100%" height="400" border=1 class="calendar table-bordered" cellspacing=1 cellpadding=2>
+            $calendar_view .= '<h3 style="text-align: center;"></h3><table width="100%" height="400" border=1 class="calendar table-bordered" cellspacing=1 cellpadding=2>
  <tr>
   <td height="60" class="title" colspan=7>
    <table width="100%" border=0 cellspacing=0 cellpadding=0>
@@ -133,7 +133,7 @@ class Calendar extends Widget
  </tr>
  <tr height="30" class="week"><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td style="color: red">Сб</td><td style="color: red">Вс</td></tr>';
         } else {
-            $calendar_view .= '<h3 style="text-align: center;">Отпуска</h3><table width="100%" height="400" border=1 class="calendar table-bordered" cellspacing=1 cellpadding=2>
+            $calendar_view .= '<h3 style="text-align: center;"></h3><table width="100%" height="400" border=1 class="calendar table-bordered" cellspacing=1 cellpadding=2>
  <tr>
   <td height="60" class="title" colspan=7>
    <table width="100%" border=0 cellspacing=0 cellpadding=0>
