@@ -119,7 +119,7 @@ class Calendar extends Widget
     opacity: 1; /* Показываем подсказку */
     top: 2em; /* Положение подсказки */
    }
-   [calendar] {
+   [table] {
    background-color: #d9edf7;
    padding: 10px;
    border-radius: 10px;
