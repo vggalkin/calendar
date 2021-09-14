@@ -77,13 +77,11 @@ class Calendar extends Widget
                     $count_holidays = 0;
                     while ($count_holidays < intval($listmain[2])) {
                         array_push($holidays, date("Y-m-d", mktime(0, 0, 0, intval($listdate[1]), intval($listdate[0]) + $count_holidays, intval($listdate[2]))));
-                        $count_holidays ++;
+                        $count_holidays++;
                     }
                 }
             }
         }
-        //var_dump($holidays);
-        //var_dump(explode(',', $fill[0]));
         $month_stamp = mktime(0, 0, 0, $m, 1, $y);
         $day_count = date("t", $month_stamp);
         $weekday = date("w", $month_stamp);
@@ -153,7 +151,6 @@ class Calendar extends Widget
  </tr>
  <tr height="30" class="week"><td>Пн</td><td>Вт</td><td>Ср</td><td>Чт</td><td>Пт</td><td style="color: red">Сб</td><td style="color: red">Вс</td></tr>';
         }
-        //$birth_date_exp = explode('-', $this->birth_date);
 
         for ($d = $start; $d <= $end; $d++) {
             if (!($i++ % 7)) $calendar_view .= " <tr>\n";
@@ -162,33 +159,27 @@ class Calendar extends Widget
                 $calendar_view .= "&nbsp";
             } else {
                 $now = "$y-$m-" . sprintf("%02d", $d);
-                $now_2 = explode('-', $now)[1] . explode('-', $now)[2] ;
-                $birth_2 = explode('-',$birth)[1] . explode('-', $birth)[2];
+                $now_2 = explode('-', $now)[1] . explode('-', $now)[2];
+                $birth_2 = explode('-', $birth)[1] . explode('-', $birth)[2];
                 // Сегодняшний день, день рождения и отпуск
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now and $now_2 == $birth_2) {
                     $calendar_view .= '<div class="todate" style="background: linear-gradient(to right, #ff7125f5 33%, #4be079 34%, #4be079 66%, #f18d8d 67%);" data-tooltip="День рождения Отпуск Сегодня"><b>' . $d . '</b></div>';
-                }
-                // Отпуск и день рождения
+                } // Отпуск и день рождения
                 else if (is_array($holidays) and in_array($now, $holidays) and $now_2 == $birth_2) {
                     $calendar_view .= '<div class="todate" style="background: linear-gradient(to right, #ff7125f5 50%, #f18d8d 51%);" data-tooltip="День рождения Отпуск"><b>' . $d . '</b></div>';
-                }
-                // Отпуск и сегодняшний день
+                } // Отпуск и сегодняшний день
                 else if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
                     $calendar_view .= '<div class="todate" style="background: linear-gradient(to right, #f18d8d 50%, #4be079 51%);" data-tooltip="Отпуск Сегодня"><b>' . $d . '</b></div>';
-                }
-                // День рождения и сегодняшний день
+                } // День рождения и сегодняшний день
                 else if ($now_2 == $birth_2 and $today == $now) {
                     $calendar_view .= '<div class="todate" style="background: linear-gradient(to right, #ff7125f5 50%, #4be079 51%);" data-tooltip="День рождения Сегодня"><b>' . $d . '</b></div>';
-                }
-                // Отпуск
+                } // Отпуск
                 else if (is_array($holidays) and in_array($now, $holidays)) {
                     $calendar_view .= '<div class="todate" style="background-color: #f18d8d;" data-tooltip="Отпуск">' . $d . '</div>';
-                }
-                // Сегодняшний день
+                } // Сегодняшний день
                 else if ($today == $now) {
                     $calendar_view .= '<div class="todate" style="background-color: #4be079;" data-tooltip="Сегодня">' . $d . '</div>';
-                }
-                // День рождения
+                } // День рождения
                 else if ($now_2 == $birth_2) {
                     $calendar_view .= '<div class="todate" style="background-color: #ff7125f5;" data-tooltip="День рождения">' . $d . '</div>';
                 } else {
