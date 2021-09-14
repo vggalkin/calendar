@@ -160,11 +160,11 @@ class Calendar extends Widget
                 $birth_2 = explode('-',$birth)[1] . explode('-', $birth)[2];
                 // Сегодняшний день, день рождения и отпуск
                 if (is_array($holidays) and in_array($now, $holidays) and $today == $now and $now_2 == $birth_2) {
-                    $calendar_view .= '<div class="todate" style="background: linear-gradient(to right, #ff7125f5 33%, #4be079 34%, #4be079 66%, #f18d8d 67%);" data-tooltip="День рождения"><b>' . $d . '</b></div>';
+                    $calendar_view .= '<div class="todate" style="background: linear-gradient(to right, #ff7125f5 33%, #4be079 34%, #4be079 66%, #f18d8d 67%);" data-tooltip="День рождения\nОтпуск\nСегодня"><b>' . $d . '</b></div>';
                 }
                 // Отпуск и день рождения
                 else if (is_array($holidays) and in_array($now, $holidays) and $now_2 == $birth_2) {
-                    $calendar_view .= '<div class="todate" style="background: linear-gradient(to right, #ff7125f5 50%, #f18d8d 51%);" data-tooltip="День рождения"><b>' . $d . '</b></div>';
+                    $calendar_view .= '<div class="todate" style="background: linear-gradient(to right, #ff7125f5 50%, #f18d8d 51%);" data-tooltip="День рождения\nОтпуск"><b>' . $d . '</b></div>';
                 }
                 // Отпуск и сегодняшний день
                 else if (is_array($holidays) and in_array($now, $holidays) and $today == $now) {
