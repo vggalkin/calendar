@@ -46,8 +46,8 @@ class Calendar extends Widget
     {
         $calendar_view = '';
 
-        $month_names = array("январь", "февраль", "март", "апрель", "май", "июнь",
-            "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь");
+        $month_names = array("Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+            "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь");
         if (isset($_GET['y'])) $y = $_GET['y'];
         if (isset($_GET['m'])) $m = $_GET['m'];
         if (isset($_GET['date']) and strstr($_GET['date'], "-")) list($y, $m) = explode("-", $_GET['date']);
