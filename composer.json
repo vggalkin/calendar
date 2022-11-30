@@ -19,9 +19,6 @@
             "vggalkin\\calendar\\": ""
         }
     },
-    "require": {
-        "vggalkin/calendar": "dev-master"
-    },
     "repositories": [
         {
             "type": "vcs",
